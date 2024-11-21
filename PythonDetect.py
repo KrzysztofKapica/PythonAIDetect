@@ -54,7 +54,7 @@ def load_model(model_path):
     return model
 
 # Load the model
-model_path = './model/faster_rcnn_address.pth'
+model_path = './model/faster_rcnn_address.pth' # Path to your previously trained model (extension .pth)
 faster_rcnn = load_model(model_path)
 
 # Function to process images in all subdirectories
