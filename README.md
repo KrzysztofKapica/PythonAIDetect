@@ -50,10 +50,8 @@ PythonAIDetect
 
 - In Linux terminal go to main folder of 'PythonAIDetect' and type down **python PythonDetect.py**. This command will start the application.
 
-![pic1](https://github.com/user-attachments/assets/3c9e82a5-6929-4762-a6e5-eec79b5df0c0)
-Initial screen with main menu.
-
-
+![pic_p](https://github.com/user-attachments/assets/e5dd26ff-ae5e-4b79-88f5-fd4ac76c28d1)
+The user has to enter a folder with images he wants to process. During the process all necessary informations are displayed in a terminal.
 
 # MongoDB database
 
@@ -81,12 +79,41 @@ Example of one document of metadata on MongoDB database sent by the application:
 
 The application creates: 
 - 'image path' the place where the image is found on a disk.
-- 'coordinates' where the sensitive data can be. After the user's modifications this section is upgraded.
-- After the user's modifications updates 'to_do' from 'pending' to 'done'. It helps to avoid browsing images, which were modified earlier.
+- 'coordinates' where the sensitive data can be. 
+- Default value of 'to_do' is 'pending'. Later it is changed after modifications done by the user. It helps to avoid browsing images, which were modified earlier.
 
 
 # Troubleshooting during development
-
+While loading the model I had to add the same configuration as it had been used in a script for training the neural network: 
+```
+    model_config = {
+        'num_classes': 6,
+        'backbone_out_channels': 512,
+        'min_im_size': 600,
+        'max_im_size': 1000,
+        'scales': [128, 256, 512],
+        'aspect_ratios': [0.5, 1, 2],
+        'rpn_bg_threshold': 0.3,
+        'rpn_fg_threshold': 0.7,
+        'rpn_nms_threshold': 0.7,
+        'rpn_train_prenms_topk': 12000,
+        'rpn_test_prenms_topk': 6000,
+        'rpn_train_topk': 2000,
+        'rpn_test_topk': 300,
+        'rpn_batch_size': 256,
+        'rpn_pos_fraction': 0.5,
+        'roi_iou_threshold': 0.5,
+        'roi_low_bg_iou': 0.0,
+        'roi_pool_size': 7,
+        'roi_nms_threshold': 0.3,
+        'roi_topk_detections': 100,
+        'roi_score_threshold': 0.05,
+        'roi_batch_size': 128,
+        'roi_pos_fraction': 0.25,
+        'fc_inner_dim': 1024
+    }
+```
+Initially I did not have all necessary keys that RCNN model expected. And that caused 'keyError'.
 
 # Licence
 This project is open source.
