@@ -19,7 +19,7 @@
 
 It sends to MongoDB database named 'image_analysis', and its collection 'object_detection' that kind of [metadata](#mongodb-database).
 
-The script for training Faster-RCNN model of neural network is taken from [explaininai](https://github.com/explainingai-code/FasterRCNN-PyTorch?tab=readme-ov-file) github repository.
+The script for training Faster-RCNN model of neural network is taken from [explainingai](https://github.com/explainingai-code/FasterRCNN-PyTorch?tab=readme-ov-file) github repository.
 
 # Installation
 
