@@ -83,7 +83,7 @@ The application creates:
 - 'coordinates' where the sensitive data can be. 
 - Default value of 'to_do' is 'pending'. Later it is changed after modifications done by the user. It helps to avoid browsing images, which were modified earlier.
 
-**IMPORTANT NOTE:** The MongoDB database named 'image_analysis', and collection 'object_detection' have to be ready before the application is used. This application does not create them in database. 
+**IMPORTANT NOTE:** The MongoDB database named 'image_analysis', and its collection 'object_detection' have to be ready before the application is used. This application does not create them in the database.
 
 # Troubleshooting during development
 While loading the model I had to add the same configuration as it had been used in a script for training the neural network: 
