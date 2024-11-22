@@ -1,6 +1,6 @@
 # PythonAIDetect
 
-[About](#about-data-anonymizer)
+[About](#about-pythonaidetect)
 
 [Installation](#installation)
 
