@@ -15,11 +15,11 @@
 
 # About PythonAIDetect
 
-"PythonAIDetect" is an locally run application where a user, through simple 'tkinter' interface, can choose folder with jpg images to process. The application uses previously trained RCNN type neural network, which was traind for looking hand written mail addresses, and sends metdata about every image to MongoDB database.
+"PythonAIDetect" is an locally run application where a user, through simple 'tkinter' interface, can choose folder with jpg images to process. The application uses previously trained Faster-RCNN (Faster Region Based Convolutional Neural Network) type neural network, which was traind for looking hand written mail addresses, and sends metdata about every image to MongoDB database. 
 
 It sends to MongoDB database named 'image_analysis', and its collection 'object_detection' that kind of [metadata](#mongodb-database).
 
-The RCNN (Reginal Convolutional Neural Network) model of neural network is based on https
+The script for training Faster-RCNN model of neural network is taken from [explaininai](https://github.com/explainingai-code/FasterRCNN-PyTorch?tab=readme-ov-file) github repository.
 
 # Installation
 
@@ -51,6 +51,7 @@ PythonAIDetect
 - In Linux terminal go to main folder of 'PythonAIDetect' and type down **python PythonDetect.py**. This command will start the application.
 
 ![pic_p](https://github.com/user-attachments/assets/e5dd26ff-ae5e-4b79-88f5-fd4ac76c28d1)
+
 The user has to enter a folder with images he wants to process. During the process all necessary informations are displayed in a terminal.
 
 # MongoDB database
